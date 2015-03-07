@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		912E994A1A6342A200991F64 /* libcairo.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 912E99491A6342A200991F64 /* libcairo.2.dylib */; };
+		912E994C1A63939600991F64 /* libfreetype.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 912E994B1A63939600991F64 /* libfreetype.6.dylib */; };
+		912E994E1A6490D100991F64 /* libncurses.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 912E994D1A6490D100991F64 /* libncurses.dylib */; };
+		913265281A61C06000BB9DC5 /* libopencv_core.2.4.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 913265251A61C06000BB9DC5 /* libopencv_core.2.4.10.dylib */; };
+		913265291A61C06000BB9DC5 /* libopencv_highgui.2.4.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 913265261A61C06000BB9DC5 /* libopencv_highgui.2.4.10.dylib */; };
+		9132652A1A61C06000BB9DC5 /* libopencv_imgproc.2.4.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 913265271A61C06000BB9DC5 /* libopencv_imgproc.2.4.10.dylib */; };
+		913265311A61C1B500BB9DC5 /* libopencv_objdetect.2.4.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 913265301A61C1B500BB9DC5 /* libopencv_objdetect.2.4.10.dylib */; };
+		91BA76C41A68368E00B5A4DC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91BA76C31A68368E00B5A4DC /* main.cpp */; };
+		91D8D6311A6722A70037F27C /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D8D6301A6722A70037F27C /* SDL2.framework */; };
+		91D8D6331A6722B60037F27C /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D8D6321A6722B60037F27C /* SDL2_mixer.framework */; };
+		91DDDE301A867E08008E4CD3 /* Mustache Mayhem in CopyFiles */ = {isa = PBXBuildFile; fileRef = 91DDDE2F1A867DDC008E4CD3 /* Mustache Mayhem */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		91BA76C91A6840A000B5A4DC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SRCROOT)";
+			dstSubfolderSpec = 0;
+			files = (
+				91DDDE301A867E08008E4CD3 /* Mustache Mayhem in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		912E99491A6342A200991F64 /* libcairo.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcairo.2.dylib; path = /opt/local/lib/libcairo.2.dylib; sourceTree = "<absolute>"; };
+		912E994B1A63939600991F64 /* libfreetype.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreetype.6.dylib; path = /opt/local/lib/libfreetype.6.dylib; sourceTree = "<absolute>"; };
+		912E994D1A6490D100991F64 /* libncurses.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libncurses.dylib; path = usr/lib/libncurses.dylib; sourceTree = SDKROOT; };
+		913265251A61C06000BB9DC5 /* libopencv_core.2.4.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.2.4.10.dylib; path = /usr/local/lib/libopencv_core.2.4.10.dylib; sourceTree = "<absolute>"; };
+		913265261A61C06000BB9DC5 /* libopencv_highgui.2.4.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.2.4.10.dylib; path = /usr/local/lib/libopencv_highgui.2.4.10.dylib; sourceTree = "<absolute>"; };
+		913265271A61C06000BB9DC5 /* libopencv_imgproc.2.4.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.2.4.10.dylib; path = /usr/local/lib/libopencv_imgproc.2.4.10.dylib; sourceTree = "<absolute>"; };
+		913265301A61C1B500BB9DC5 /* libopencv_objdetect.2.4.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_objdetect.2.4.10.dylib; path = ../../../../../../../usr/local/lib/libopencv_objdetect.2.4.10.dylib; sourceTree = "<group>"; };
+		9162A3461AA9394A0000CD78 /* BBB */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BBB; sourceTree = BUILT_PRODUCTS_DIR; };
+		918D4C691AA93A94009681B3 /* Mustache Mayhem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Mustache Mayhem"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91BA76C31A68368E00B5A4DC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		91D8D6301A6722A70037F27C /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = /Library/Frameworks/SDL2.framework; sourceTree = "<absolute>"; };
+		91D8D6321A6722B60037F27C /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = /Library/Frameworks/SDL2_mixer.framework; sourceTree = "<absolute>"; };
+		91DDDE2F1A867DDC008E4CD3 /* Mustache Mayhem */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = "Mustache Mayhem"; path = "DerivedData/Mustache Mayhem/Build/Products/Debug/Mustache Mayhem"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91104CE71A61BA6C00D8019D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91D8D6331A6722B60037F27C /* SDL2_mixer.framework in Frameworks */,
+				91D8D6311A6722A70037F27C /* SDL2.framework in Frameworks */,
+				912E994E1A6490D100991F64 /* libncurses.dylib in Frameworks */,
+				912E994C1A63939600991F64 /* libfreetype.6.dylib in Frameworks */,
+				912E994A1A6342A200991F64 /* libcairo.2.dylib in Frameworks */,
+				913265311A61C1B500BB9DC5 /* libopencv_objdetect.2.4.10.dylib in Frameworks */,
+				913265281A61C06000BB9DC5 /* libopencv_core.2.4.10.dylib in Frameworks */,
+				913265291A61C06000BB9DC5 /* libopencv_highgui.2.4.10.dylib in Frameworks */,
+				9132652A1A61C06000BB9DC5 /* libopencv_imgproc.2.4.10.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91104CE11A61BA6C00D8019D = {
+			isa = PBXGroup;
+			children = (
+				9132652B1A61C07900BB9DC5 /* Libraries */,
+				91104CEC1A61BA6C00D8019D /* Mustache Mayhem */,
+				918D4C691AA93A94009681B3 /* Mustache Mayhem */,
+				9162A3461AA9394A0000CD78 /* BBB */,
+			);
+			sourceTree = "<group>";
+		};
+		91104CEC1A61BA6C00D8019D /* Mustache Mayhem */ = {
+			isa = PBXGroup;
+			children = (
+				91BA76C31A68368E00B5A4DC /* main.cpp */,
+				91DDDE2F1A867DDC008E4CD3 /* Mustache Mayhem */,
+			);
+			path = "Mustache Mayhem";
+			sourceTree = "<group>";
+		};
+		9132652B1A61C07900BB9DC5 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				91D8D6321A6722B60037F27C /* SDL2_mixer.framework */,
+				91D8D6301A6722A70037F27C /* SDL2.framework */,
+				912E994D1A6490D100991F64 /* libncurses.dylib */,
+				912E994B1A63939600991F64 /* libfreetype.6.dylib */,
+				912E99491A6342A200991F64 /* libcairo.2.dylib */,
+				913265251A61C06000BB9DC5 /* libopencv_core.2.4.10.dylib */,
+				913265261A61C06000BB9DC5 /* libopencv_highgui.2.4.10.dylib */,
+				913265271A61C06000BB9DC5 /* libopencv_imgproc.2.4.10.dylib */,
+				913265301A61C1B500BB9DC5 /* libopencv_objdetect.2.4.10.dylib */,
+			);
+			name = Libraries;
+			path = "Mustache Mayhem";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91104CE91A61BA6C00D8019D /* Mustache Mayhem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91104CF11A61BA6C00D8019D /* Build configuration list for PBXNativeTarget "Mustache Mayhem" */;
+			buildPhases = (
+				91104CE61A61BA6C00D8019D /* Sources */,
+				91104CE71A61BA6C00D8019D /* Frameworks */,
+				91BA76C91A6840A000B5A4DC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mustache Mayhem";
+			productName = "Mustache Mayhem";
+			productReference = 918D4C691AA93A94009681B3 /* Mustache Mayhem */;
+			productType = "com.apple.product-type.tool";
+		};
+		91697E211A68469800C72DB0 /* BBB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91697E311A68469800C72DB0 /* Build configuration list for PBXNativeTarget "BBB" */;
+			buildPhases = (
+				91697E301A68469800C72DB0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBB;
+			productName = "Mustache Mayhem";
+			productReference = 9162A3461AA9394A0000CD78 /* BBB */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91104CE21A61BA6C00D8019D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Joe Grand";
+				TargetAttributes = {
+					91104CE91A61BA6C00D8019D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 91104CE51A61BA6C00D8019D /* Build configuration list for PBXProject "Mustache Mayhem" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 91104CE11A61BA6C00D8019D;
+			productRefGroup = 91104CE11A61BA6C00D8019D;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91104CE91A61BA6C00D8019D /* Mustache Mayhem */,
+				91697E211A68469800C72DB0 /* BBB */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91697E301A68469800C72DB0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/expect -f";
+			shellScript = "spawn scp -r \"/Users/joegrand/Projects/Archived/Mustache Mayhem/Source/main.cpp\" root@beaglebone.local:/home/root/stache\nexpect \"password:\"\nsend \"\\r\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91104CE61A61BA6C00D8019D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91BA76C41A68368E00B5A4DC /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		91104CEF1A61BA6C00D8019D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OBJROOT = "$(SYMROOT)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SYMROOT = build;
+			};
+			name = Debug;
+		};
+		91104CF01A61BA6C00D8019D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OBJROOT = "$(SYMROOT)";
+				SDKROOT = macosx;
+				SYMROOT = build;
+			};
+			name = Release;
+		};
+		91104CF21A61BA6C00D8019D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"_OSX=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Utilities/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/include/**",
+					/opt/local/include,
+					/opt/local/include/freetype2,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/**",
+					/opt/local/lib/cairo,
+					/opt/local/lib,
+				);
+				OBJROOT = "$(OBJROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "$(SYMROOT)";
+			};
+			name = Debug;
+		};
+		91104CF31A61BA6C00D8019D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = "_OSX=1";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Utilities/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/include/**",
+					/opt/local/include,
+					/opt/local/include/freetype2,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/**",
+					/opt/local/lib/cairo,
+					/opt/local/lib,
+				);
+				OBJROOT = "$(OBJROOT)";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "$(SYMROOT)";
+			};
+			name = Release;
+		};
+		91697E321A68469800C72DB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"_OSX=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Utilities/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/include/**",
+					/opt/local/include,
+					/opt/local/include/freetype2,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/**",
+					/opt/local/lib/cairo,
+					/opt/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "";
+			};
+			name = Debug;
+		};
+		91697E331A68469800C72DB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = "_OSX=1";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Utilities/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/include/**",
+					/opt/local/include,
+					/opt/local/include/freetype2,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/**",
+					/opt/local/lib/cairo,
+					/opt/local/lib,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91104CE51A61BA6C00D8019D /* Build configuration list for PBXProject "Mustache Mayhem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91104CEF1A61BA6C00D8019D /* Debug */,
+				91104CF01A61BA6C00D8019D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91104CF11A61BA6C00D8019D /* Build configuration list for PBXNativeTarget "Mustache Mayhem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91104CF21A61BA6C00D8019D /* Debug */,
+				91104CF31A61BA6C00D8019D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91697E311A68469800C72DB0 /* Build configuration list for PBXNativeTarget "BBB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91697E321A68469800C72DB0 /* Debug */,
+				91697E331A68469800C72DB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91104CE21A61BA6C00D8019D /* Project object */;
+}
