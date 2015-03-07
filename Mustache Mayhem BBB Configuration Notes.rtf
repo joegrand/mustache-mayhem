@@ -1,0 +1,147 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1344\cocoasubrtf720
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww17200\viewh14500\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs28 \cf0 MUSTACHE MAYHEM / BEAGLEBONE BLACK ANGSTROM 2012.12/3.8.13\
+
+\b0 \
+
+\i NETWORK CONFIGURATION 
+\i0 \
+\
+- Defaults to 192.168.7.2\
+- ssh root@192.168.7.2 -X (enable X11 forwarding/display)\
+\
+1. Install FTDI/HoRNDIS drivers\
+2. Enable Internet Sharing on OS X for BBB\
+3. screen /dev/tty.usbmodem141433 115200 (ctrl-A ctrl-\\ to close properly)\
+4. Login root/no password\
+5. /sbin/route add default gw 192.168.7.1\
+6. /sbin/udhcpc -i usb0 (IP address now on local network & can reach Internet)\
+7. Modify /etc/ssh_config on OS X to enable compression and aes128-cbc cipher for beaglebone.local SSH connections\
+8. Make persistent on boot w/ system services (see section below)\
+\
+- ssh root@beaglebone.local (name set in /etc/hostname)\
+\
+\
+
+\i AUDIO\
+\
+
+\i0 - Disable HDMI audio virtual cape manager
+\i \
+
+\i0 	- Add "capemgr.disable_partno=BB-BONELT-HDMI" to first line of uENV.txt on boot partition (mass storage device)\
+\
+- aplay -L (list available ALSA soundcards/audio devices)\
+- aplay -D "default:CARD=Device" filename.wav\
+\
+- aplay -l (list card numbers of available audio devices)\
+- Adjust audio settings using alsamixer (GUI) or amixer:\
+	- amixer -c 1 controls (lists numids of adjustable controls for card 1)\
+	- amixer -c 1 cset numid=5 x% (set volume of speaker playback to 0-100%)\
+	- alsactl store (make settings persistent)\
+\
+- Install SDL (Simple DirectMedia Layer)\
+	- opkg install libsdl-1.2-0\
+	- opkg install libsdl-1.2-dev\
+	- opkg install libsdl-1.2-staticdev\
+	- opkg install libsdl-mixer-1.2-0\
+	- opkg install libsdl-mixer-1.2-dev\
+	- opkg install libsdl-mixer-1.2-staticdev\
+	- Audio output not functioning properly with pre-built install, so compile from source\
+		- https://www.libsdl.org/release/SDL-1.2.15.tar.gz (./configure, make, make install)\
+\
+\pard\pardeftab720
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\i \cf0 VIDEO\
+
+\i0 \
+- Disable frame buffer auto-blank\
+	- Add "consoleblank=0" to first line of uENV.txt on boot partition (mass storage device) (affects text consoles only)\
+	- Updated /etc/X11/xorg.conf (affects GUI)\
+\
+- Modify ~/.profile to set $DISPLAY environment variable to :0.0 (local) if it hasn't been set (for example, from SSH X11 forwarding)\
+
+\b \
+
+\b0 - Modify /etc/lxdm/lxdm.conf for auto-login on power-up\
+- Install XFCE to replace GNOME\
+	1) opkg install lxdm\
+	2) systemctl disable gdm.service\
+	3) systemctl enable lxdm\
+	4) opkg install packagegroup-xfce-base\
+	5) reboot\
+	6) xrandr --output HDMI-0 --mode 1024x768 --rate 60 (set proper resolution)\
+	7) Select XFCE and English at Login Screen\
+	8) Install Unclutter (http://ftp.x.org/contrib/utilities/unclutter-8.tar.Z) (make, make install)\
+	8) Set Application Autostart for Unclutter and Mustache Mayhem from Settings | Session and Startup | Application Autostart\
+	9) Modified /usr/share/themes/HighContrastInverse/gtk-2.0 for black background (bg[NORMAL])\
+	10) Set Appearance for Xfce-dusk\
+\
+- Install wmctrl (to launch an application in full-screen)\
+	1) opkg install libxmu-dev\
+	2) http://tomas.styblo.name/wmctrl/ (./configure, make, make install)\
+	3) ~/stache/runstache & sleep 30 && wmctrl -r :ACTIVE: -b add,fullscreen\
+\
+\
+
+\i GPIO\
+
+\i0 \
+- Install libsoc (for interfacing to peripherals via generic kernel interfaces)\
+	1) git clone git://github.com/jackmitch/libsoc (./autogen.sh, ./configure, make, make install)\
+	2) Add export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH to ~/.profile\
+\
+\
+
+\i EXECUTE ON BOOT (SYSTEM SERVICES) (Optional)
+\i0 \
+\
+- Create /lib/systemd/system/autoexec.service\
+	- Runs /home/root/autoexec.sh (make sure chmod u+x)\
+		* Delay to ensure system is completely up\
+		* Configure network for Internet access\
+			1. Sets static MAC address\
+			2. Gets IP address from laptop's shared network connection (192.168.2.x)\
+\
+- systemctl enable autoexec (enable and execute on boot)\
+- systemctl status autoexec (status/log)\
+- systemctl disable autoexec (for production when Internet connectivity not needed)\
+\
+\
+
+\i OTHER GENERAL CONFIGURATION (Ensure Internet access first!)
+\i0 \
+\
+- opkg update (update package index)\
+- opkg upgrade (install any updates)\
+- Install and configure ntp (Network Time Protocol) for persistent time/date (optional)\
+\
+- Install geany (IDE/text editor + GUI) (optional)\
+	1) opkg install intltool\
+	2) http://www.geany.org (./configure)\
+	3) Edit Makefile to remove "-1.14" from aclocal and automake calls\
+	4) make, make check, make install\
+\
+\
+
+\i DEACTIVATE UNNECCESSARY SERVICES
+\i0 \
+\
+- Disable verbose drm debug messages
+\i \
+
+\i0 	- Change "drm.debug=7" to "drm.debug=0" in uENV.txt on boot partition (mass storage device)\
+\
+- systemctl disable cloud9.service\
+- systemctl disable bonescript.service\
+- systemctl disable bonescript.socket\
+- systemctl disable bonescript-autorun.service\
+- systemctl disable connman.service (replace w/ /etc/network/interfaces)\
+\
+}
