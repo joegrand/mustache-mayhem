@@ -1,14 +1,10 @@
 CC=g++
-CFLAGS=`pkg-config --static --libs opencv` -O3
-
-# I've saved off some magic lines that help me build on a personal machine
-#CFLAGS := `pkg-config --static --libs opencv | perl -pe "s/\/Users\/jason\/gentoo\/usr\/lib/\/usr\/local\/lib/g"`
-#CFLAGS := `pkg-config --static --libs opencv | perl -pe "s/\/Users\/jason\/gentoo\/usr\/lib/\/usr\/local\/lib/g" | perl -pe "s/\.dynlib/\.a/g"` /Developer/SDKs/MacOSX10.7.sdk/usr/lib/crt1.o
+CFLAGS=`pkg-config --static --libs opencv cairo freetype2 ncurses` `sdl-config --cflags --libs` -lSDL_mixer -lsoc -I/usr/include/freetype2 -O3
 
 all: stache
 
-stache: stache.cpp
-	$(CC) $(CFLAGS) -o stache stache.cpp
+stache: main.cpp
+	$(CC) $(CFLAGS) -o stache main.cpp
 
 clean:
 	rm -f stache
