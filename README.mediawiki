@@ -1,6 +1,12 @@
-=== Stache ===
-This application builds on an OpenCV face detection sample, but adds a
-black mustache on the faces detected.
+=== Mustache Mayhem ===
+Mustache Mayhem is a mixed media and electronics project designed to challenge the paradigms of personal privacy and entertainment. The game provides a singular, entertaining goal: Overlay virtual mustaches onto real-world faces for points.
+
+Refer to the project page for more details:
+
+http://www.grandideastudio.com/portfolio/mustache-mayhem/
+
+=== Author ===
+Created by Joe Grand of [http://www.grandideastudio.com Grand Idea Studio]. Inspired by and based on the [http://www.element14.com/community/community/designcenter/single-board-computers/next-gen_beaglebone/blog/2013/06/01/boothstache-facial-hair-fun-with-beaglebone-black BoothStache] project for the [http://beagleboard.org/black BeagleBone Black].
 
 === License ===
  <nowiki>
