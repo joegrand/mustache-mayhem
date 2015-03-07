@@ -1,8 +1,9 @@
 [Desktop Entry]
 Version=1.0
-Name=BeagleStache
-Comment=Superimposes mustache using OpenCV
+Name=Mustache Mayhem
+Comment=Score points by placing virtual mustaches onto real-world faces 
 Exec=/home/root/stache/runstache
+Path=/home/root/stache
 Icon=/home/root/stache/beaglestache.png
 Terminal=false
 Type=Application
