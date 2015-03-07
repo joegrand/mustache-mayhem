@@ -48,3 +48,5 @@ Created by Joe Grand of [http://www.grandideastudio.com Grand Idea Studio]. Insp
  or tort (including negligence or otherwise) arising in any way out of
  the use of this software, even if advised of the possibility of such damage.
 </nowiki>
+
+All contributions by Joe Grand are distributed under a [https://creativecommons.org/licenses/by-sa/4.0/ Creative Commons Attribution-ShareAlike 4.0 International] license. This means that you can share and adapt the work, but you must attribute the work to the original author and maintain a compatible license.
