@@ -1,6 +1,0 @@
-module.exports.twitterKey="Consumer key"
-module.exports.twitterSecret="Consumer secret"
-module.exports.accessToken="Access token"
-module.exports.tokenSecret="Access token secret"
-module.exports.message="New #BeagleBoneBlack @BeagleStache image captured!"
-
