@@ -1,3 +1,5 @@
 #!/bin/sh
+
+sleep 30
 cd $HOME/stache
-node tweetstache.js
+node tweetstache.js & sleep 30 && wmctrl -r :ACTIVE: -b add,fullscreen
